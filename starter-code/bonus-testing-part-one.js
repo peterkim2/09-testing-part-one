@@ -9,52 +9,57 @@
 /* Below is a basic example of a test "framework" where
     our test is a function that we can reuse to check against
     different components of our application.
-    The `!expression` may look odd - we test for failing
-    functionality first to then refactor the test to pass.
+    We test for failing functionality first to then refactor
+    the test to pass.
+
     This is common practice in testing ('red-green' refactoring).
 */
-function expect(expression, failureMessage, successMessage) {
-  if (!expression) {
-    console.log('test failed:', failureMessage);
-    return;
+
+function assert(expression, successMessage, failureMessage) {
+  if (expression) {
+    return console.log('test passing:', successMessage);
   }
-  console.log('test passed:', successMessage);
+  console.log('test failing:', failureMessage);
 }
 
-/* Below is an example of our test in action.
-TODO: Run this file in node
-    to see what happens when the test fails, then change `ricksFaveAnimal`
-    to get the test to pass!
+//  Below, we will write an example of our test in action:
+
+var ricksFaveAnimal;
+
+exampleTest = function() {
+  assert(
+
+  );
+};
+
+
+/* ========================================================================
+------------------------- Favorite Animals --------------------------------
+===========================================================================
+The zoo is closing in 20 minutes. You still haven't seen your four favorite
+animals. You only have time for one. How do you choose just one?!
 */
-var ricksFaveAnimal = 'hyena';
-
-expect(
-  ricksFaveAnimal === 'penguin',
-  'ricksFavoriteAnimal should equal penguin, but currently equals ' + ricksFaveAnimal,
-  'ricksFavoriteAnimal equals penguin!');
-
-  // BEGIN WORK BELOW - test code by running `node bonus-testing-part-one.js`
-  //  in your terminal!
-
-  /* ========================================================================
-  ------------------------- Favorite Animals --------------------------------
-  ===========================================================================
-   The zoo is closing in 20 minutes. You still haven't seen your four favorite
-   animals. You only have time for one. How do you choose just one?!
-  */
 
 var favoriteAnimals = ['elephants', 'penguins', 'eagles', 'camels'];
 var nextAnimal;
 
-  /* TODO:
-      Assign one of your favorite animals dynamically by chance to the
-      nextAnimal variable   :-)
-      Your code begins on the next line: */
 
-  /* TODO:
-      Write a test! Use the `expect()` function we defined earlier to ensure
-      that an element in the favoriteAnimals array was assigned to nextAnimal.
-      No hard-coded results allowed! (ex: seeing if nextAnimal is equal to
-      just 'penguin').
-      Remember to: pass in your expression, and write a failure and a success
-      message. Your test begins on the next line: */
+/* TODO:
+Write a test FIRST! Use the `assert()` function below to ensure
+that an element in the favoriteAnimals array was assigned to nextAnimal.
+
+No hard-coded results allowed! (e.g. -  seeing if nextAnimal is equal to
+just 'penguin').
+Remember to: pass in your expression, and write a success and a failure
+message. */
+
+faveAnimalTest = function() {
+  assert(
+
+  );
+};
+
+/* TODO:
+Now assign one of your favorite animals dynamically, by chance, to the
+nextAnimal variable ... then invoke your test!   :-)
+Your code begins on the next line: */
