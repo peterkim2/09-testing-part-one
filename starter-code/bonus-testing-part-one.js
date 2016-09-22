@@ -16,10 +16,13 @@
 */
 
 function assert(expression, successMessage, failureMessage) {
+  var currentTest = assert.caller.name;
   if (expression) {
-    return console.log('test passing:', successMessage);
+    return console.log('\n' + currentTest +
+      ' test passing:', successMessage);
   }
-  console.log('test failing:', failureMessage);
+  console.log('\n' + currentTest +
+    ' test failing:', failureMessage);
 }
 
 //  Below, we will write an example of our test in action:
