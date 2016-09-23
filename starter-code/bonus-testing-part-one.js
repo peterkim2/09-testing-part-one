@@ -10,7 +10,7 @@
     our test is a function that we can reuse to check against
     different components of our application.
     We test for failing functionality first to then refactor
-    the test to pass.
+    our code to pass.
 
     This is common practice in testing ('red-green' refactoring).
 */
