@@ -16,25 +16,18 @@
 */
 
 function assert(expression, successMessage, failureMessage) {
-  var currentTest = assert.caller.name;
+  var green = '  \x1b[32m(test passing):\x1b[m';
+  var red = '  \x1b[31m(test failing):\x1b[0m';
+  var test = '\x1b[35m' + assert.caller.name + '\x1b[m';
   if (expression) {
-    return console.log('\n' + currentTest +
-      ' test passing:', successMessage);
+    return console.log(test,'\n', green, successMessage);
   }
-  console.log('\n' + currentTest +
-    ' test failing:', failureMessage);
+  console.log(test, '\n', red, failureMessage);
 }
 
 //  Below, we will write an example of our test in action:
 
 var ricksFaveAnimal;
-
-exampleTest = function() {
-  assert(
-
-  );
-};
-
 
 /* ========================================================================
 ------------------------- Favorite Animals --------------------------------
@@ -56,7 +49,7 @@ just 'penguin').
 Remember to: pass in your expression, and write a success and a failure
 message. */
 
-faveAnimalTest = function() {
+function faveAnimalTest() {
   assert(
 
   );
