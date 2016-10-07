@@ -23,7 +23,7 @@ var assert = require('./vendor/assert');
 var ricksFaveAnimal;
 
 function testRicksFaveAnimal() {
-  assert (true, 'hah', 'wut');
+  assert ();
 }
 
 testRicksFaveAnimal();
@@ -58,5 +58,7 @@ function testWhichAnimal() {
 testWhichAnimal();
 /* TODO:
 Now assign one of your favorite animals dynamically, by chance, to the
-nextAnimal variable ... then invoke your test!   :-)
+nextAnimal variable ... then invoke your test!
+When ready, execute this program in your terminal with node
+(node bonus-testing-part-one)  :-)
 Your code begins on the next line: */
