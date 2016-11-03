@@ -20,14 +20,26 @@ var assert = require('./vendor/assert');
 
 //  Below, we will write an example of our test in action:
 
-var ricksFaveAnimal;
+var ricksFaveAnimal = 'shiba';
 
 function testRicksFaveAnimal() {
-  assert ();
+  assert (
+    typeof ricksFaveAnimal === 'string',
+    'Yay! ricksFaveAnimal is a string',
+    'ricksFaveAnimal should be a string, but is currently ' + ricksFaveAnimal + '.'
+  );
+}
+
+function testIsValidString() {
+  assert (
+    ricksFaveAnimal.trim().length,
+    'ricksFaveAnimal is a string with content.',
+    'ricksFaveAnimal is an empty string!'
+  );
 }
 
 testRicksFaveAnimal();
-
+testIsValidString();
 
 /* ========================================================================
 ------------------------- Favorite Animals --------------------------------
